@@ -1,0 +1,6 @@
+# ninja log v5
+1	636	7567791717652783	CMakeFiles/main.dir/main.cpp.obj	7680ff006f97d7af
+36	638	7567791717652783	CMakeFiles/main.dir/Polynom.cpp.obj	deb1aafe5afa8a1a
+29	660	7567791717965507	CMakeFiles/main.dir/Monom.cpp.obj	3e89185a90832e33
+5	630	7567792576424761	CMakeFiles/main.dir/Polynom.cpp.obj	deb1aafe5afa8a1a
+631	826	7567792578298747	main.exe	a69ba1de524a6698

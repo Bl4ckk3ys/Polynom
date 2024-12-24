@@ -1,0 +1,20 @@
+[
+{
+  "directory": "D:/Code/Polynom/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe -g -o CMakeFiles\\main.dir\\main.cpp.obj -c D:\\Code\\Polynom\\main.cpp",
+  "file": "D:\\Code\\Polynom\\main.cpp",
+  "output": "CMakeFiles\\main.dir\\main.cpp.obj"
+},
+{
+  "directory": "D:/Code/Polynom/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe -g -o CMakeFiles\\main.dir\\Monom.cpp.obj -c D:\\Code\\Polynom\\Monom.cpp",
+  "file": "D:\\Code\\Polynom\\Monom.cpp",
+  "output": "CMakeFiles\\main.dir\\Monom.cpp.obj"
+},
+{
+  "directory": "D:/Code/Polynom/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe -g -o CMakeFiles\\main.dir\\Polynom.cpp.obj -c D:\\Code\\Polynom\\Polynom.cpp",
+  "file": "D:\\Code\\Polynom\\Polynom.cpp",
+  "output": "CMakeFiles\\main.dir\\Polynom.cpp.obj"
+}
+]
