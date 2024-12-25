@@ -7,7 +7,6 @@ Polynom::Polynom() {
 }
 
 Polynom::Polynom(const Polynom& tmp) {
-    // _head = tmp._head;
     _head = nullptr;
     Node* tmpHead = tmp._head;
     while (tmpHead != nullptr) {
@@ -38,7 +37,7 @@ void Polynom::AppendMonom(Monom monom) {
                 Monom result = tmp->GetMonom() + monom;
                 tmp->SetMonom(result);
                 return;
-        }//как решить проблему копи паста здесь?
+        }
         tmp->Next = new Node(monom);
     }
 }
@@ -50,7 +49,7 @@ void Polynom::Print() {
             tmp->GetMonom().print();
         else {
             if (tmp->GetMonom().GetCoef() > 0)
-                std::cout << " + ";
+                std::cout << "+";
             tmp->GetMonom().print();
         }
         tmp = tmp->Next;
@@ -132,7 +131,7 @@ Polynom Polynom::operator/(const Polynom& polynom) const {
         delete temp3;
         m1 = temp1.MaxMonom();
     }
-    std::cout<<"ostatok: ";
+    std::cout<<"Remainder: ";
     temp1.Print();
     std::cout<<"\n";
     return res;

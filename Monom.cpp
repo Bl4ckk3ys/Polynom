@@ -13,7 +13,6 @@ double Monom::GetCoef() const {
 void Monom::print() const{
     if (_coef == 0) return;
 
-    
     std::cout<<_coef;
 
     for (size_t i = 0; i < _size; i++){
@@ -49,20 +48,6 @@ Monom& Monom::operator=(const Monom& mon){
     return *this;
 }
 
-Monom Monom::operator+(const Monom& mon)const{
-    Monom a(*this);
-    if (a._size != mon._size){
-        throw "Mnogo hochesh";
-    }
-    for (size_t i = 0; i < _size; i ++){
-        if (a._array[i] != mon._array[i]){
-            throw "Mnogo hochesh";
-        }
-    }
-    a._coef += mon._coef;
-    return a;
-};
-
 bool Monom::CanOperate(const Monom& mon) const {
     if (this->_size != mon._size){
         return false;
@@ -75,22 +60,28 @@ bool Monom::CanOperate(const Monom& mon) const {
     return true;
 }
 
+Monom Monom::operator+(const Monom& mon)const{
+    Monom a(*this);
+    if(CanOperate(mon)){
+        a._coef += mon._coef;
+        return a;
+    }
+    else throw "Incompatible monoms.\n";
+};
+
+
+
 bool Monom::operator==(const Monom& m) const{
     return _coef == m.GetCoef() && this->CanOperate(m);
 }
 
 Monom Monom::operator-(const Monom& mon)const{
     Monom a(*this);
-    if (a._size != mon._size){
-        throw "Mnogo hochesh";
+        if(CanOperate(mon)){
+            a._coef -= mon._coef;
+            return a;
     }
-    for (size_t i = 0; i < _size; i ++){
-        if (a._array[i] != mon._array[i]){
-            throw "Mnogo hochesh";
-        }
-    }
-    a._coef -= mon._coef;
-    return a;
+    else throw "Incompatible monoms.\n";
 };
 
 Monom Monom::operator*(const Monom& mon) const{
